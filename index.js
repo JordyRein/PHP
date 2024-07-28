@@ -1,3 +1,2 @@
-
-console.log("I Am Alive!!"):
+document.body.innerHTML += "Funi Stuff Happens Here";
 
