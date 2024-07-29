@@ -1,4 +1,4 @@
 # PHP
 Personal Home Page
 
-jordyrein.github.io/PHP/
+[Funni PHP stuff](https://jordyrein.github.io/PHP/)
