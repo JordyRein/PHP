@@ -1,22 +1,26 @@
 
 class BannerComponent extends HTMLElement{
+
+  const selectors = ['.banner-ct'];
+
   constructor(){
     super();
+    this.scope='banner';
   }
 
   async connectedCallback(){
-    const [htmlRes, cssRes] = await Promise.all([
-      fetch('./components/banner/banner.html'),
-      fetch('./components/banner/banner.css'),
-    ]);
+    const htmlRes = await fetch('./component/banner/banner.html');
 
     const tmpl = document.createElement('template');
     tmpl.innerHTML = await htmlRes.text();
 
-    const style = document.createElement('style');
-    style.textContext = await cssRes.text();
+    this.selectors.forEach(el=>{
+      const tmp = this.querySelector(el):
+      if(tmp){
+        tmp.setAttribute('data-scope', this.scope);
+      }
+    });
 
-    this.appendChild(style);
     this.appendChild(tmpl.content.cloneNode(true));
   }
 
