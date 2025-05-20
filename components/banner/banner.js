@@ -15,7 +15,7 @@ class BannerComponent extends HTMLElement{
     tmpl.innerHTML = await htmlRes.text();
 
     this.selectors.forEach(el=>{
-      const tmp = this.querySelector(el):
+      const tmp = this.querySelector(el);
       if(tmp){
         tmp.setAttribute('data-scope', this.scope);
       }
