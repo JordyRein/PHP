@@ -18,7 +18,7 @@ class BannerComponent extends HTMLElement{
     style.textContext = await cssRes.text();
 
     this.shadowRoot.appendChild(style);
-    this.shadowRott.appendChild(tmpl.content.cloneNode(true));
+    this.shadowRoot.appendChild(tmpl.content.cloneNode(true));
   }
 
   async disconnectedCallback(){
