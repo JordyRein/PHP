@@ -2,7 +2,6 @@
 class BannerComponent extends HTMLElement{
   constructor(){
     super();
-    this.attachShadow({mode:'open'});
   }
 
   async connectedCallback(){
@@ -17,8 +16,8 @@ class BannerComponent extends HTMLElement{
     const style = document.createElement('style');
     style.textContext = await cssRes.text();
 
-    this.shadowRoot.appendChild(style);
-    this.shadowRoot.appendChild(tmpl.content.cloneNode(true));
+    this.appendChild(style);
+    this.appendChild(tmpl.content.cloneNode(true));
   }
 
   async disconnectedCallback(){
