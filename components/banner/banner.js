@@ -26,4 +26,4 @@ class BannerComponent extends HTMLElement{
   }
 }
 
-customElements.define('banner', BannerComponent);
+customElements.define('banner-component', BannerComponent);
