@@ -9,7 +9,7 @@ class BannerComponent extends HTMLElement{
   }
 
   async connectedCallback(){
-    const htmlRes = await fetch('./component/banner/banner.html');
+    const htmlRes = await fetch('./components/banner/banner.html');
 
     const tmpl = document.createElement('template');
     tmpl.innerHTML = await htmlRes.text();
