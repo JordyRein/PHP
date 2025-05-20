@@ -7,8 +7,8 @@ class BannerComponent extends HTMLElement{
 
   async connectedCallback(){
     const [htmlRes, cssRes] = await Promise.all([
-      fetch('./banner.html'),
-      fetch('./banner.css'),
+      fetch('./components/banner/banner.html'),
+      fetch('./components/banner/banner.css'),
     ]);
 
     const tmpl = document.createElement('template');

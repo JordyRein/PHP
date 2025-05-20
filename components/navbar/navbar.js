@@ -7,8 +7,8 @@ class NavbarComponent extends HTMLElement{
 
   async connectedCallback(){
     const [htmlRes, cssRes] = await Promise.all([
-      fetch('./navbar.html'),
-      fetch('./navbar.css'),
+      fetch('./components/navbar/navbar.html'),
+      fetch('./components/navbar/navbar.css'),
     ]);
 
     const tmpl = document.createElement('template');
