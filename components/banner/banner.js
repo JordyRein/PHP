@@ -1,11 +1,11 @@
 
 class BannerComponent extends HTMLElement{
 
-  const selectors = ['.banner-ct'];
 
   constructor(){
     super();
     this.scope='banner';
+    this.selectors = ['.banner-ct'];
   }
 
   async connectedCallback(){
